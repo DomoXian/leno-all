@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: moyu
+  #redis配置
+  redis:
+    #服务器地址
+    host: 47.100.5.182
+    #数据库索引（默认为0）
+    database: 0
+    #端口
+    port: 6379
+    #密码
+    password: r-uf64731eff2b5964:Alix123456
+    #连接池
+    pool:
+      #最大连接数
+      max-active: 300
+      #最大阻塞等待时间
+      max-wait: 10000
+      #最大空闲连接
+      max-idle: 100
+      #最小空闲连接
+      min-idle: 0
+    #连接超时
+    timeout: 30000
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+
+# 日志配置
+logging:
+  config: classpath:leno-logback.xml
+
+
